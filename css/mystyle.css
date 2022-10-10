@@ -1,0 +1,519 @@
+/*===== Defining Color Variables =====*/
+:root {
+  --primary-color: #ff7200;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #fefdfd;
+  --text-gray: #999;
+  --primary-font: "Roboto", sans-serif;
+  --secondry-font: "Montserrat", sans-serif;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+
+::-webkit-scrollbar {
+  width: 0.65rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+h1 {
+  font-family: var(--primary-font);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--white-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  color: var(--white-color);
+  line-height: 3rem;
+}
+
+h3 {
+  font-family: var(--secondry-font);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: var(--primary-color);
+  font-family: var(--secondry-font);
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+/*
+==========================================
+   Home Section Design
+==========================================
+*/
+
+#home {
+  position: relative;
+  background: url("../images/backgrounds/bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+#home:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#home .container {
+  position: relative;
+}
+.navbar-brand {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  border-color: var(--primary-color);
+  color: transparent;
+}
+.nav-link {
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0 4px;
+}
+.nav-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease, left 0.5s ease;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+}
+.btn {
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.btn:focus,
+.btn:active.focus,
+.btn:active:focus {
+  box-shadow: none;
+}
+.btn-primary,
+.btn-primary:focus {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: var(--white-color);
+}
+.btn-outline-primary,
+.btn-outline-primary:focus {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary a,
+.btn-primary a:focus,
+.btn-primary a:hover,
+.btn-outline-primary a,
+.btn-outline-primary a:focus,
+.btn-outline-primary a:hover {
+  color: var(--white-color) !important;
+}
+
+/*
+==========================================
+   Specialities Section Design
+==========================================
+*/
+#specialities {
+  padding: 2rem 0;
+}
+.bg-left-half {
+  position: relative;
+}
+.bg-left-half:before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: var(--primary-color);
+}
+.speciality-item {
+  /*  background-color: #212529;*/
+  background-color: var(--black-color);
+  text-align: center;
+  padding: 0.5rem;
+}
+.speciality-item img {
+  margin: 20px auto;
+}
+.speciality-item h3 {
+  color: var(--primary-color);
+}
+.owl-carousel .owl-item img {
+  width: auto;
+}
+.owl-2-style .owl-nav {
+  display: none;
+}
+.owl-2-style .owl-dots {
+  text-align: center;
+  position: relative;
+  bottom: -30px;
+}
+.owl-2-style .owl-dots .owl-dot {
+  display: inline-block;
+}
+.owl-2-style .owl-dots .owl-dot span {
+  display: inline-block;
+  width: 15px;
+  height: 3px;
+  border-radius: 0px;
+  background: #cccccc;
+  -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+  -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+  transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+  margin: 3px;
+}
+.owl-2-style .owl-dots .owl-dot.active span {
+  background: var(--primary-color);
+}
+.owl-2-style .owl-dots .owl-dot:active,
+.owl-2-style .owl-dots .owl-dot:focus {
+  outline: none;
+}
+/*
+==========================================
+   History Section Design
+==========================================
+*/
+#history {
+  padding: 0.1rem 0;
+}
+#history h2,
+#history p {
+  color: var(--black-color);
+}
+#history .btn-primary:hover {
+  background-color: var(--white-color);
+  border-color: var(--primary-color);
+}
+#history .btn-primary a:hover {
+  color: var(--primary-color) !important;
+}
+/*
+==========================================
+   Quote Section Design
+==========================================
+*/
+#quote {
+  width: 100%;
+  background: url("../images/backgrounds/bg-3.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 71.9125px;
+  padding: 4.5rem 0;
+  margin: 1.5rem 0;
+}
+
+/*
+==========================================
+   Menu Section Design
+==========================================
+*/
+#menu {
+  padding-top: 0.5rem;
+  padding-bottom: 4.5rem;
+}
+#menu h2 {
+  color: var(--black-color);
+  margin-bottom: 1rem;
+}
+.card,
+.card-img-top {
+  border-radius: 25px 25px 0 0;
+}
+.card-text {
+  color: var(--text-gray);
+  font-size: 0.8rem;
+}
+
+/*
+==========================================
+   Testimonial Section Design
+==========================================
+*/
+#testimonial {
+  background-color: var(--primary-color);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: var(--white-color);
+  text-align: center;
+}
+.carousel-caption img {
+  max-width: 5rem;
+  border-radius: 50%;
+  padding: 0.3125rem;
+}
+.carousel-caption p {
+  font-size: 1rem;
+  line-height: 2.0625rem;
+  padding: 0 11% 0.625rem;
+  color: var(--text-gray);
+}
+#testimonial .carousel-indicators {
+  bottom: -2.8125rem;
+}
+#testimonial .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+#testimonial .carousel-indicators button.active {
+  opacity: 1;
+}
+
+/*
+==========================================
+   Booking Section Design
+==========================================
+*/
+#booking-section {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+#booking-section h2 {
+  color: var(--black-color);
+  margin-bottom: 1rem;
+}
+.booking {
+  position: relative;
+  background: url("../images/backgrounds/bg2.jpg") no-repeat center;
+  background-size: cover;
+  padding: 2rem 0;
+}
+.booking:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.booking .container {
+  position: relative;
+}
+.booking-form {
+  max-width: 100%;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.booking-form label {
+  font-size: 25px;
+  font-stretch: condensed;
+  text-align: left;
+  color: var(--white-color);
+  width: 100%;
+  padding-right: 1rem;
+}
+.booking-form input {
+  border: 1px solid #eaeaea;
+  padding: 20px 30px;
+  height: auto;
+  color: var(--white-color);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  max-height: 56px;
+}
+.form-control {
+  width: 100%;
+  background-color: transparent;
+}
+
+/*
+==========================================
+   Footer Section Design
+==========================================
+*/
+.footer {
+  background-color: var(--black-color);
+  overflow-x: hidden;
+}
+.footer h4 {
+  margin: 20px 0;
+}
+.footer a {
+  color: var(--text-color);
+}
+.footer .icon {
+  padding-right: 20px;
+}
+
+/*
+==========================================
+   Responsive Design
+==========================================
+*/
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  h3 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 0.8rem;
+    line-height: 1.75rem;
+  }
+  .btn-primary,
+  .btn-outline-primary {
+    font-size: 1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    padding: 0 10% 0.6rem;
+  }
+  #testimonial .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+  }
+  .booking-form label {
+    font-size: 16px;
+  }
+  .footer .icon {
+    padding-right: 10px;
+  }
+}
