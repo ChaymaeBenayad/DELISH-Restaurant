@@ -454,17 +454,29 @@ p {
 ==========================================
 */
 .footer {
-  background-color: var(--black-color);
-  overflow-x: hidden;
+  background: var(--primary-color);
 }
-.footer h4 {
-  margin: 20px 0;
+.footer .footer-link {
+  font-size: 1rem;
+  color: var(--white-color);
+  padding: 0 1.875rem;
 }
-.footer a {
-  color: var(--text-color);
+.footer .footer-link:hover {
+  color: var(--black-color) !important;
 }
-.footer .icon {
-  padding-right: 20px;
+.footer a i {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  padding: 0 1rem;
+}
+.footer a i:hover {
+  color: var(--black-color);
+}
+.footer .footer-copy a {
+  color: var(--black-color);
+}
+.footer .footer-copy a:hover {
+  color: var(--white-color) !important;
 }
 
 /*
@@ -513,7 +525,8 @@ p {
   .booking-form label {
     font-size: 16px;
   }
-  .footer .icon {
-    padding-right: 10px;
+  .footer .footer-link,
+  .footer a i {
+    padding: 0 0.4rem;
   }
 }
