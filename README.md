@@ -10,4 +10,4 @@ DELISH is a modern and responsive landing page dedicated for restaurant owners. 
 
 ## Demo
 
-https://content-creation-branding.netlify.app/
+https://delish-booking-restaurant.netlify.app/
